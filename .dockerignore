@@ -1,0 +1,17 @@
+## .dockerignore
+## https://docs.docker.com/engine/reference/builder/#dockerignore-file
+## Blacklist all files and whitelist project related
+*
+!setup.py
+!setup.cfg
+!MANIFEST.in
+!README.md
+!entrypoint.sh
+!requirements*.txt
+## Allow source
+!src/*
+src/*.egg-info
+
+## Blacklist tmp files inside nested dirs
+*.py[cod]
+__pycache__
