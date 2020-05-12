@@ -17,7 +17,7 @@ clear:
 
 bootstrap-venv:
 	#rm -rf $(virtualenv_dir)
-	if [ -d "$(virtualenv_dir)" ]; then \
+	if [ ! -d "$(virtualenv_dir)" ]; then \
 		python3 -m virtualenv -ppython3 --no-site-packages $(virtualenv_dir); \
 	fi
 

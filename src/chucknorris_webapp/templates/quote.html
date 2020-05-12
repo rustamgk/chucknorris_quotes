@@ -1,0 +1,6 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>Random {{ category if category != None }} quote</h1>
+    <p>{{ quote.value }}</p>
+{% endblock %}

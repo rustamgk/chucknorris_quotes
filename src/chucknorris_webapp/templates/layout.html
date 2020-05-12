@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuck Norris Quotes</title>
+    <style>
+        ul.categories {
+            display: inline-block;
+            padding-left: 0;
+        }
+
+        ul.categories li {
+            display: inline-block;
+        }
+
+        ul.categories li + li::before {
+            content: ' | ';
+        }
+    </style>
+</head>
+<body>
+<a href="{{ url_for('front') }}">Chuck Norris Quotes</a> ::
+
+<ul class="categories">
+    <li><a href="{{ url_for('quote') }}" title="Random quote">random</a></li>
+    {% for category in categories %}
+        <li><a href="{{ url_for('quote', category=category) }}" title="Random {{ category }} quote">{{ category }}</a>
+        </li>
+    {% endfor %}
+</ul>
+<hr>
+{% block content %}
+
+{% endblock %}
+
+<hr>
+Chuck Norris quotes
+</body>
+</html>
