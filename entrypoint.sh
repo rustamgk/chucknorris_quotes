@@ -8,5 +8,5 @@ export FLASK_APP=chucknorris_webapp
 exec gunicorn \
   --bind="0.0.0.0:${PORT}" \
   --workers=4 \
-  --log-level=info --capture-output \
+  --log-level=${GUNICORN_LOG_LEVEL:-info} --capture-output \
   "${FLASK_APP}:create_app()"
