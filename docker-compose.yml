@@ -1,0 +1,15 @@
+## docker-compose.yml
+## https://docs.docker.com/compose/compose-file/compose-file-v2/
+---
+version: "3"
+
+services:
+  nginx:
+    build:
+      context: ./nginx/
+    ports:
+      - "127.0.0.1:18080:80"
+
+  quotes-webapp:
+    build:
+      context: .

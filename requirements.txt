@@ -1,0 +1,9 @@
+## requirements.txt
+## https://pip.pypa.io/en/stable/user_guide/#requirements-files
+## Usage:
+## python3 -m virtualenv -ppython3 --no-site-packages venv
+## source ./venv/bin/activate
+## python3 -m pip install -r requirements.txt
+##
+
+.[gunicorn]
